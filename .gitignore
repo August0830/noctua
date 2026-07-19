@@ -1,0 +1,15 @@
+# Symlinks (read-only references to external workspaces)
+rome
+crucible
+
+# IDE
+.idea/
+.obsidian/
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# EverOS local data
+.everos/
