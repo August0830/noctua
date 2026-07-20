@@ -13,3 +13,11 @@ __pycache__/
 
 # EverOS local data
 .everos/
+
+# Raven local workspace (syncs with store, don't commit)
+HEARTBEAT.md
+TOOLS.md
+agent_memory/
+memory/
+sessions/
+user_memory/
