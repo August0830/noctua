@@ -70,7 +70,7 @@
 | 2.1 | 定义 Crucible 测试场景的 Raven Agent Template | P0 | `[x]` | 1.2 |
 | 2.2 | 定义 Rome 推理场景的 Raven Agent Template | P0 | `[x]` | 1.3 |
 | 2.3 | 实现检查点执行协议（YAML plan → steps → checkpoints） | P0 | `[x]` | — |
-| 2.4 | 实现决策追溯链（每个动作 → 来源 LoRA/技能/历史） | P0 | `[ ]` | 2.3 |
+| 2.4 | 实现决策追溯链（每个动作 → 来源 LoRA/技能/历史） | P0 | `[x]` | 2.3 |
 | 2.5 | 实现步骤级中断/恢复（人类在检查点暂停） | P1 | `[ ]` | 2.3 |
 | 2.6 | 将 Crucible 测试运行器集成到 Raven Agent 工具 | P0 | `[ ]` | 2.1, 2.3 |
 | 2.7 | 将 Rome Ray Job 提交/监控集成到 Raven Agent 工具 | P0 | `[ ]` | 2.2, 2.3 |

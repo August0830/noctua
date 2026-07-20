@@ -12,8 +12,17 @@ from noctua.agent.protocol import (
     TraceEntry,
     TrainingSignal,
 )
+from noctua.agent.trace import (
+    ActionTrace,
+    ProvenanceItem,
+    ProvenanceSource,
+    SessionTrace,
+    trace_to_agent_case,
+    trace_to_training_signals,
+)
 
 __all__ = [
+    # Protocol
     "Plan",
     "PlanStatus",
     "PlanContext",
@@ -26,4 +35,11 @@ __all__ = [
     "Decision",
     "TraceEntry",
     "TrainingSignal",
+    # Trace
+    "ActionTrace",
+    "ProvenanceItem",
+    "ProvenanceSource",
+    "SessionTrace",
+    "trace_to_agent_case",
+    "trace_to_training_signals",
 ]
