@@ -20,7 +20,7 @@
 | ID | 任务 | 优先级 | 状态 | 依赖 |
 |----|------|--------|------|------|
 | 0.1 | 安装 EverOS，运行 `everos demo`，验证记忆管线 | P0 | `[x]` | — |
-| 0.2 | 安装 Raven，运行 `raven onboard`，验证 Agent Harness | P0 | `[ ]` | — |
+| 0.2 | 安装 Raven，运行 `raven onboard`，验证 Agent Harness | P0 | `[x]` | — |
 | 0.3 | 安装 EverMe CLI，运行 `evercli auth login` | P0 | `[x]` | — |
 | 0.4 | 配置 EverMe → OpenCode 插件（`evercli plugin install opencode`） | P0 | `[x]` | 0.3 |
 | 0.5 | 验证跨工具记忆：OpenCode → 本地 EverOS 写入链路打通 | P0 | `[x]` | 0.4 |
