@@ -14,8 +14,8 @@ EVEROS_URL = "http://127.0.0.1:8000"
 DB_PATH = Path.home() / ".local/share/opencode/opencode.db"
 CHECKPOINT_PATH = Path.home() / ".everos/.import_checkpoint.json"
 USER_ID = "mengzhilu"
-BATCH_SIZE = 50
-MAX_RETRIES = 3
+BATCH_SIZE = 25
+MAX_RETRIES = 5
 
 
 def get_sessions(db_path: Path, limit: int | None = None) -> list[dict]:
@@ -107,7 +107,7 @@ def post_to_everos(session: dict, messages: list[dict]) -> bool:
                     headers={"Content-Type": "application/json"},
                     method="POST",
                 )
-                with urllib.request.urlopen(req, timeout=120) as resp:
+                with urllib.request.urlopen(req, timeout=300) as resp:
                     result = json.loads(resp.read())
                     if result.get("error"):
                         print(f"  batch {batch_start//BATCH_SIZE+1}/{-( -len(messages)//BATCH_SIZE)} "

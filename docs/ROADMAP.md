@@ -24,9 +24,9 @@
 | 0.3 | 安装 EverMe CLI，运行 `evercli auth login` | P0 | `[x]` | — |
 | 0.4 | 配置 EverMe → OpenCode 插件（`evercli plugin install opencode`） | P0 | `[x]` | 0.3 |
 | 0.5 | 验证跨工具记忆：OpenCode → 本地 EverOS 写入链路打通 | P0 | `[x]` | 0.4 |
-| 0.6 | 搭建 noctua 项目结构：`src/`、`tests/`、`configs/`、`skills/` | P1 | `[ ]` | — |
+| 0.6 | 搭建 noctua 项目结构：`src/`、`tests/`、`configs/`、`skills/` | P1 | `[x]` | — |
 | 0.7 | 编写开发者环境文档 `CONTRIBUTING.md` | P1 | `[ ]` | 0.6 |
-| 0.8 | 验证 EverOS 对 `rome/` 和 `crucible/` 软链的只读访问 | P1 | `[ ]` | — |
+| 0.8 | 验证 EverOS 对 `rome/` 和 `crucible/` 软链的只读访问 | P1 | `[x]` | — |
 
 **完成标准：**
 - EverOS 服务本地运行，记忆写入/搜索正常

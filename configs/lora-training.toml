@@ -1,0 +1,29 @@
+# LoRA Training Configuration Template
+#
+# Parameters for verl-mint / Ray Train LoRA fine-tuning.
+
+[training]
+framework = "verl-mint"           # or "ray-train-lora"
+base_model = "deepseek-chat"      # or "Qwen3-235B-A22B"
+lora_rank = 8                     # start small, scale up with data
+
+[training.data]
+# Trajectory data source (EverOS agent-memory -> LoRA training pairs)
+source = "everos"
+filters = """
+  app_id == 'noctua'
+  AND memory_type == 'agent_case'
+  AND success == true
+"""
+min_episodes_for_training = 50
+split_ratio = 0.8                 # train/test split
+
+[training.rl]
+algorithm = "grpo"                # or "dapo"
+reward_source = "verifier_actor"  # from rome/ray-agentic-batch-inference
+kl_penalty = 0.001
+
+[training.deploy]
+# SGLang multi-LoRA batching support
+target_engine = "sglang"
+max_loras_per_batch = 4

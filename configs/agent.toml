@@ -1,0 +1,31 @@
+# Noctua Agent Configuration
+#
+# Agent runtime settings: LLM backend, tool permissions, checkpoints.
+
+[agent]
+name = "noctua"
+description = "Self-evolving agent for GPU inference optimization and integration testing"
+
+[agent.llm]
+provider = "deepseek"
+model = "deepseek-chat"
+base_url = "https://api.deepseek.com"
+# api_key read from EVEROS_LLM__API_KEY env var
+
+[agent.tools]
+# Soft-link directories accessible by agent (read-only)
+readonly_paths = [
+  "rome/rubicon/data/",
+  "rome/rubicon/docs/",
+  "crucible/testdata/",
+  "crucible/share/",
+]
+sandbox_enabled = true
+
+[agent.checkpoint]
+# Human-in-the-loop checkpoints
+require_human_approval_for = [
+  "scale_gpu_cluster",
+  "modify_production_config",
+  "trigger_lora_training",
+]
