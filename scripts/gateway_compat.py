@@ -11,7 +11,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, Request, UploadFile
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
@@ -158,3 +158,53 @@ async def mem_agent_memory(req: GatewayAgentMemoryRequest, request: Request):
         "flushed": req.flush,
         "status": result.status,
     })
+
+
+# ── Knowledge document upload ──────────────────────────────────────────
+# Gateway-compatible route for uploading documents (Markdown, etc.)
+# to the EverOS Knowledge Wiki. Uses multipart/form-data.
+# POST /api/v1/mem/knowledge/documents
+
+
+@router.post("/knowledge/documents")
+async def mem_knowledge_upload(
+    request: Request,
+    file: UploadFile,
+    title: str = "",
+    source_type: str = "markdown",
+    category_id: str | None = None,
+):
+    request_id = extract_request_id(request)
+
+    from everos.core.persistence.memory_root import MemoryRoot
+    from everos.entrypoints.api.routes.knowledge import (
+        _build_extractor,
+        _map_create_result,
+        _parse_upload,
+        _reject_oversized_upload,
+    )
+    from everos.service.knowledge import create_document
+
+    _reject_oversized_upload(file)
+    file_content = await file.read()
+    parsed = await _parse_upload(file, raw_bytes=file_content)
+    source_name = file.filename or "document.md"
+    display_title = title or source_name.rsplit(".", 1)[0]
+
+    knowledge_dir = MemoryRoot.default().knowledge_dir(DEFAULT_APP_ID, DEFAULT_PROJECT_ID)
+    extractor = _build_extractor()
+
+    result = await create_document(
+        extractor=extractor,
+        parsed=parsed,
+        title=display_title,
+        knowledge_dir=knowledge_dir,
+        source_name=source_name,
+        source_type=source_type,
+        category_id=category_id,
+        file_content=file_content,
+    )
+    response_data = _map_create_result(result)
+    if hasattr(response_data, "model_dump"):
+        response_data = response_data.model_dump(mode="json")
+    return _gw_ok(request_id, response_data)
