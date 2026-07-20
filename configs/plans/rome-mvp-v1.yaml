@@ -1,0 +1,54 @@
+# Rome 最小闭环 — 分析已有实验数据
+
+plan_id: "rome-mvp-analysis-20260720"
+domain: rome
+agent_template: rome
+status: draft
+created_by: human
+
+context:
+  knowledge_docs:
+    - "metrics-framework"
+    - "optimization-playbook"
+    - "inference-roofline-flowchart"
+  episodes:
+    - "seed-todos-ROADMAP"
+
+steps:
+  - id: "collect-existing-results"
+    description: "扫描 rome/rubicon/data/results/ 下已有的实验结果 JSON"
+    type: auto
+    tool: read_file
+    params:
+      glob: "rome/rubicon/data/results/*.json"
+    expected_output: "已有的实验结果文件列表"
+
+  - id: "read-key-results"
+    description: "读取最近 3 份实验结果，提取关键指标"
+    type: auto
+    tool: read_file
+    params:
+      files_from: "${step.collect-existing-results.output}"
+
+  - id: "cross-reference-playbook"
+    description: "交叉对比 metrics-framework 和 optimization-playbook，看实验结果和调优手册是否一致"
+    type: auto
+    tool: read_file
+    params:
+      files: 
+        - "rome/rubicon/docs/designs/metrics-framework.md"
+        - "rome/rubicon/docs/designs/optimization-playbook.md"
+
+  - id: "checkpoint-review"
+    description: "Agent 产出分析报告，人类审查"
+    type: checkpoint
+    checkpoint:
+      approval: required
+      prompt: "Agent 已完成实验数据分析。请审查分析报告，确认结论正确后继续。"
+
+  - id: "save-to-everos"
+    description: "将分析结果存入 EverOS：关键指标 → atomic_fact，分析方法 → agent_case"
+    type: auto
+    tool: mem_save_turn
+    params:
+      trajectory: "${session_trace}"
