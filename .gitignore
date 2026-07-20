@@ -21,3 +21,7 @@ agent_memory/
 memory/
 sessions/
 user_memory/
+configs/agent.toml
+configs/lora-training.toml
+
+# Keep plan templates but not actual plans (task-specific)
