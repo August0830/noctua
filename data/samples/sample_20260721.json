@@ -1,0 +1,1613 @@
+{
+  "dataset_id": "noctua-sample-20260721",
+  "sample_count": 5,
+  "cases": [
+    {
+      "case_id": "lollapalooza-paper-reading-20260721",
+      "plan_id": "lollapalooza-paper-reading-20260721",
+      "domain": "paper-reading",
+      "task_description": "Lollapalooza Paper Reading — 综合论文分析",
+      "task_instruction": "系统性地阅读和分析相关论文，建立技术全景图",
+      "steps": [
+        {
+          "turn": 1,
+          "action": "analyze_背景与动机",
+          "action_type": "text_output",
+          "reasoning": "阅读并分析: 背景与动机",
+          "tool_args": {
+            "section": "背景与动机"
+          },
+          "tool_result": {
+            "content_length": 755,
+            "has_table": true
+          },
+          "success": true,
+          "duration_ms": 7550,
+          "error": null
+        },
+        {
+          "turn": 2,
+          "action": "analyze_现有基线论文",
+          "action_type": "text_output",
+          "reasoning": "阅读并分析: 现有基线论文",
+          "tool_args": {
+            "section": "现有基线论文"
+          },
+          "tool_result": {
+            "content_length": 1563,
+            "has_table": false
+          },
+          "success": true,
+          "duration_ms": 15630,
+          "error": null
+        },
+        {
+          "turn": 3,
+          "action": "analyze_phase_1_论文检索结果",
+          "action_type": "text_output",
+          "reasoning": "阅读并分析: Phase 1 论文检索结果",
+          "tool_args": {
+            "section": "Phase 1 论文检索结果"
+          },
+          "tool_result": {
+            "content_length": 3410,
+            "has_table": true
+          },
+          "success": true,
+          "duration_ms": 34100,
+          "error": null
+        },
+        {
+          "turn": 4,
+          "action": "analyze_关键发现",
+          "action_type": "text_output",
+          "reasoning": "阅读并分析: 关键发现",
+          "tool_args": {
+            "section": "关键发现"
+          },
+          "tool_result": {
+            "content_length": 718,
+            "has_table": false
+          },
+          "success": true,
+          "duration_ms": 7180,
+          "error": null
+        },
+        {
+          "turn": 5,
+          "action": "analyze_phase_6:_综合分析（2026-07-21）",
+          "action_type": "text_output",
+          "reasoning": "阅读并分析: Phase 6: 综合分析（2026-07-21）",
+          "tool_args": {
+            "section": "Phase 6: 综合分析（2026-07-21）"
+          },
+          "tool_result": {
+            "content_length": 1964,
+            "has_table": true
+          },
+          "success": true,
+          "duration_ms": 19640,
+          "error": null
+        }
+      ],
+      "provenance": [
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "EverOS",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: EverOS"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "Raven",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: Raven"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "FireAct",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: FireAct"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "EvoAgentBench",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: EvoAgentBench"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "ReAct",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: ReAct"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "SWE-bench",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: SWE-bench"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "LoRA",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: LoRA"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "GRPO",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: GRPO"
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "DPO",
+          "confidence": 0.8,
+          "snippet": "论文/技术引用: DPO"
+        }
+      ],
+      "success": true,
+      "artifact_paths": [
+        "runs/lollapalooza-paper-reading-20260721/paper-analysis.md",
+        "runs/lollapalooza-paper-reading-20260721/phase-b-detailed.md",
+        "runs/lollapalooza-paper-reading-20260721/phase-a-detailed.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/agentic/05-patr-tree-rollout.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/agentic/03-apigen-mt.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/agentic/01-orchard.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/agentic/02-environment-free-api-agent.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/agentic/04-envfactory.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/03-moebius.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/02-eldr.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/01-expertplex.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/05-dopd.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/06-pd-ratio-estimation.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/07-mooncake.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/mra-epd/04-pd-ratio-papers.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/rl/01-deepseek-r1.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/rl/02-grpo-deepseekmath.md",
+        "runs/lollapalooza-paper-reading-20260721/notes/rl/03-longstraw.md"
+      ],
+      "summary": "完成 5 个分析步骤，覆盖 9 个技术要点",
+      "total_tokens": 5187,
+      "total_wall_time_seconds": 1800.0,
+      "total_turns": 5,
+      "started_at": "2026-07-21",
+      "finished_at": "2026-07-21",
+      "verifier_score": 0.85,
+      "human_decision": null
+    },
+    {
+      "case_id": "lollapalooza-paper-reading-20260721-phase-plan",
+      "plan_id": "lollapalooza-paper-reading-20260721",
+      "domain": "paper-reading",
+      "task_description": "Phase A 详细：搭建轨迹采集 Demo Pipeline",
+      "task_instruction": "设计技术方案，产出可执行的 implementation plan",
+      "steps": [
+        {
+          "turn": 1,
+          "action": "design_demo_目标",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 1: Demo 目标",
+          "tool_args": {
+            "section": "Demo 目标"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 2,
+          "action": "design_为什么选_bfcl_v3_作为_demo_domain",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 2: 为什么选 BFCL v3 作为 Demo domain",
+          "tool_args": {
+            "section": "为什么选 BFCL v3 作为 Demo domain"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 3,
+          "action": "design_pipeline_架构",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 3: Pipeline 架构",
+          "tool_args": {
+            "section": "Pipeline 架构"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 4,
+          "action": "design_核心实现细节",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 4: 核心实现细节",
+          "tool_args": {
+            "section": "核心实现细节"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 5,
+          "action": "design_产出物",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 5: 产出物",
+          "tool_args": {
+            "section": "产出物"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 6,
+          "action": "design_成功标准",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 6: 成功标准",
+          "tool_args": {
+            "section": "成功标准"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 7,
+          "action": "design_拓展项（本期不做，记录）",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 7: 拓展项（本期不做，记录）",
+          "tool_args": {
+            "section": "拓展项（本期不做，记录）"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": false,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        }
+      ],
+      "provenance": [
+        {
+          "source_type": "episode",
+          "source_id": "lollapalooza-context",
+          "confidence": 0.8,
+          "snippet": ""
+        }
+      ],
+      "success": true,
+      "artifact_paths": [
+        "runs/lollapalooza-paper-reading-20260721/phase-a-detailed.md"
+      ],
+      "summary": "完成 7 个设计阶段",
+      "total_tokens": 4913,
+      "total_wall_time_seconds": 1200.0,
+      "total_turns": 7,
+      "started_at": "",
+      "finished_at": "",
+      "verifier_score": 0.8,
+      "human_decision": null
+    },
+    {
+      "case_id": "lollapalooza-paper-reading-20260721-phase-plan",
+      "plan_id": "lollapalooza-paper-reading-20260721",
+      "domain": "paper-reading",
+      "task_description": "Phase B 详细展开：GRPO RL 提升",
+      "task_instruction": "设计技术方案，产出可执行的 implementation plan",
+      "steps": [
+        {
+          "turn": 1,
+          "action": "design_grpo_算法回顾",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 1: GRPO 算法回顾",
+          "tool_args": {
+            "section": "GRPO 算法回顾"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": true,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 2,
+          "action": "design_reward_设计（核心难点）",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 2: Reward 设计（核心难点）",
+          "tool_args": {
+            "section": "Reward 设计（核心难点）"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 3,
+          "action": "design_ray_grpo_pipeline_架构",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 3: Ray GRPO Pipeline 架构",
+          "tool_args": {
+            "section": "Ray GRPO Pipeline 架构"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 4,
+          "action": "design_内存与时间估算",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 4: 内存与时间估算",
+          "tool_args": {
+            "section": "内存与时间估算"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": true,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 5,
+          "action": "design_预期对比指标",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 5: 预期对比指标",
+          "tool_args": {
+            "section": "预期对比指标"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 6,
+          "action": "design_longstraw_整合（可选优化）",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 6: LongStraw 整合（可选优化）",
+          "tool_args": {
+            "section": "LongStraw 整合（可选优化）"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 7,
+          "action": "design_检查点",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 7: 检查点",
+          "tool_args": {
+            "section": "检查点"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        }
+      ],
+      "provenance": [
+        {
+          "source_type": "episode",
+          "source_id": "lollapalooza-context",
+          "confidence": 0.8,
+          "snippet": ""
+        }
+      ],
+      "success": true,
+      "artifact_paths": [
+        "runs/lollapalooza-paper-reading-20260721/phase-b-detailed.md"
+      ],
+      "summary": "完成 7 个设计阶段",
+      "total_tokens": 4178,
+      "total_wall_time_seconds": 1200.0,
+      "total_turns": 7,
+      "started_at": "",
+      "finished_at": "",
+      "verifier_score": 0.8,
+      "human_decision": null
+    },
+    {
+      "case_id": "lollapalooza-reproduction-20260721-phase-plan",
+      "plan_id": "lollapalooza-reproduction-20260721",
+      "domain": "paper-reading",
+      "task_description": "Phase A 详细：搭建轨迹采集 Demo Pipeline",
+      "task_instruction": "设计技术方案，产出可执行的 implementation plan",
+      "steps": [
+        {
+          "turn": 1,
+          "action": "design_demo_目标",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 1: Demo 目标",
+          "tool_args": {
+            "section": "Demo 目标"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 2,
+          "action": "design_为什么选_bfcl_v3_作为_demo_domain",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 2: 为什么选 BFCL v3 作为 Demo domain",
+          "tool_args": {
+            "section": "为什么选 BFCL v3 作为 Demo domain"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 3,
+          "action": "design_pipeline_架构",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 3: Pipeline 架构",
+          "tool_args": {
+            "section": "Pipeline 架构"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 4,
+          "action": "design_核心实现细节",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 4: 核心实现细节",
+          "tool_args": {
+            "section": "核心实现细节"
+          },
+          "tool_result": {
+            "has_code": true,
+            "has_table": false,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 5,
+          "action": "design_产出物",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 5: 产出物",
+          "tool_args": {
+            "section": "产出物"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": true
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 6,
+          "action": "design_成功标准",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 6: 成功标准",
+          "tool_args": {
+            "section": "成功标准"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": true,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        },
+        {
+          "turn": 7,
+          "action": "design_拓展项（本期不做，记录）",
+          "action_type": "text_output",
+          "reasoning": "设计阶段 7: 拓展项（本期不做，记录）",
+          "tool_args": {
+            "section": "拓展项（本期不做，记录）"
+          },
+          "tool_result": {
+            "has_code": false,
+            "has_table": false,
+            "has_architecture": false
+          },
+          "success": true,
+          "duration_ms": 300000,
+          "error": null
+        }
+      ],
+      "provenance": [
+        {
+          "source_type": "episode",
+          "source_id": "lollapalooza-context",
+          "confidence": 0.8,
+          "snippet": ""
+        }
+      ],
+      "success": true,
+      "artifact_paths": [
+        "runs/lollapalooza-reproduction-20260721/phase-a-detailed.md"
+      ],
+      "summary": "完成 7 个设计阶段",
+      "total_tokens": 5599,
+      "total_wall_time_seconds": 1200.0,
+      "total_turns": 7,
+      "started_at": "",
+      "finished_at": "",
+      "verifier_score": 0.8,
+      "human_decision": null
+    },
+    {
+      "case_id": "scaling-admin-pr-to-master-20260721",
+      "plan_id": "scaling-admin-pr-to-master-20260721",
+      "domain": "crucible",
+      "task_description": "Scaling Admin PR 的自我审查 — 代码变更验证",
+      "task_instruction": "对 18 个修改文件进行 Build/Vet/Case 验证",
+      "steps": [
+        {
+          "turn": 1,
+          "action": "check_diff-stats",
+          "action_type": "tool_call",
+          "reasoning": "变更文件统计",
+          "tool_args": {
+            "check_id": "diff-stats"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "18 modified, 1 deleted, 8 added"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 2,
+          "action": "check_watermark-delete",
+          "action_type": "tool_call",
+          "reasoning": "watermark.go 删除合理性 — master hpa.go 已包含 SetHPAWatermarkProvider",
+          "tool_args": {
+            "check_id": "watermark-delete"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "hpa.go:142 has SetHPAWatermarkProvider with matching signature"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 3,
+          "action": "check_yaml-changes",
+          "action_type": "tool_call",
+          "reasoning": "YAML 参数对齐 — hpa-watermark.yaml / hpa-realtime-scaleup.yaml 去掉 'cpu'",
+          "tool_args": {
+            "check_id": "yaml-changes"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "两个文件各移除 1 个 'cpu' 字符串参数，签名匹配 master hpa.go"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 4,
+          "action": "check_verb-signatures",
+          "action_type": "tool_call",
+          "reasoning": "16 个 verb 文件签名修复 — endpoint, token → endpoint, token string",
+          "tool_args": {
+            "check_id": "verb-signatures"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "全部 16 处变更一致，无遗漏、无错误替换"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 5,
+          "action": "check_disablevpa-refactor",
+          "action_type": "tool_call",
+          "reasoning": "disablevpa.go 改用 rcap.PrepareApp",
+          "tool_args": {
+            "check_id": "disablevpa-refactor"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "移除手动 List/query 模式，改用 PrepareApp；签名也加了 string"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 6,
+          "action": "check_new-files",
+          "action_type": "tool_call",
+          "reasoning": "缺失文件补全 — 7 个 feature 文件 + 1 个 ptr.go",
+          "tool_args": {
+            "check_id": "new-files"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "全部 8 个文件语法正确，包名/导入正确"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 7,
+          "action": "check_build-vet",
+          "action_type": "tool_call",
+          "reasoning": "编译 + go vet 验证",
+          "tool_args": {
+            "check_id": "build-vet"
+          },
+          "tool_result": {
+            "result": "PASS (with note)",
+            "details": "go build: OK; go vet: 1 warning (cleanup_scaling.go:51 range var copies lock — 预存问题，非本次引入)"
+          },
+          "success": false,
+          "duration_ms": null,
+          "error": "go build: OK; go vet: 1 warning (cleanup_scaling.go:51 range var copies lock — 预存问题，非本次引入)"
+        },
+        {
+          "turn": 8,
+          "action": "check_case-count",
+          "action_type": "tool_call",
+          "reasoning": "Case 文件数量确认",
+          "tool_args": {
+            "check_id": "case-count"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "testdata/testcases/scaling/ 下共 62 个 case 文件"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 9,
+          "action": "check_conflict-cases",
+          "action_type": "tool_call",
+          "reasoning": "冲突 case (hpa-preset/hpa-metric/vpa-lifecycle) 内容确认",
+          "tool_args": {
+            "check_id": "conflict-cases"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "保留 feature 版本 (EnableHPA/EnableVPA 决策路径)，功能等价"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        },
+        {
+          "turn": 10,
+          "action": "check_merge-integrity",
+          "action_type": "tool_call",
+          "reasoning": "Merge 提交链路完整",
+          "tool_args": {
+            "check_id": "merge-integrity"
+          },
+          "tool_result": {
+            "result": "PASS",
+            "details": "cherry-pick commit d4e1fee 在 master 最新提交"
+          },
+          "success": true,
+          "duration_ms": null,
+          "error": ""
+        }
+      ],
+      "provenance": [
+        {
+          "source_type": "skill",
+          "source_id": "crucible-self-review",
+          "confidence": 0.9,
+          "snippet": ""
+        },
+        {
+          "source_type": "knowledge_doc",
+          "source_id": "crucible-venti-test-scaling-admin",
+          "confidence": 0.7,
+          "snippet": ""
+        }
+      ],
+      "success": true,
+      "artifact_paths": [
+        "runs/scaling-admin-pr-to-master-20260721/self-review.yaml"
+      ],
+      "summary": "完成 10 项检查, PASSED ✅",
+      "total_tokens": 2000,
+      "total_wall_time_seconds": 120.0,
+      "total_turns": 10,
+      "started_at": "2026-07-21T15:25:00Z",
+      "finished_at": "2026-07-21T15:25:00Z",
+      "verifier_score": 0.95,
+      "human_decision": null
+    }
+  ],
+  "samples": [
+    {
+      "sample_id": "lollapalooza-paper-reading-20260721-train-001",
+      "source_case_id": "lollapalooza-paper-reading-20260721",
+      "domain": "paper-reading",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是 Noctua Agent，当前领域: paper-reading。\n任务指令: 系统性地阅读和分析相关论文，建立技术全景图\n请逐步执行，必要时使用工具。每步之后说明你的推理。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "user",
+          "content": "Lollapalooza Paper Reading — 综合论文分析",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "阅读并分析: 背景与动机",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"content_length\": 755, \"has_table\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "阅读并分析: 现有基线论文",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"content_length\": 1563, \"has_table\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "阅读并分析: Phase 1 论文检索结果",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"content_length\": 3410, \"has_table\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "阅读并分析: 关键发现",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"content_length\": 718, \"has_table\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "阅读并分析: Phase 6: 综合分析（2026-07-21）",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"content_length\": 1964, \"has_table\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "执行完成。完成 5 个分析步骤，覆盖 9 个技术要点。成功: True。评分: 0.85。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        }
+      ],
+      "quality_score": 0.85,
+      "success": true,
+      "human_verified": false,
+      "skill_ids": [
+        "skill-paper-reading-003"
+      ],
+      "signal_type": "positive",
+      "created_at": "2026-07-21T08:48:38.903332+00:00",
+      "tags": [
+        "paper-reading",
+        "turns=5"
+      ]
+    },
+    {
+      "sample_id": "lollapalooza-paper-reading-20260721-phase-plan-train-001",
+      "source_case_id": "lollapalooza-paper-reading-20260721-phase-plan",
+      "domain": "paper-reading",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是 Noctua Agent，当前领域: paper-reading。\n任务指令: 设计技术方案，产出可执行的 implementation plan\n请逐步执行，必要时使用工具。每步之后说明你的推理。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "user",
+          "content": "Phase A 详细：搭建轨迹采集 Demo Pipeline",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 1: Demo 目标",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 2: 为什么选 BFCL v3 作为 Demo domain",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 3: Pipeline 架构",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 4: 核心实现细节",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 5: 产出物",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 6: 成功标准",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 7: 拓展项（本期不做，记录）",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": false, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "执行完成。完成 7 个设计阶段。成功: True。评分: 0.8。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        }
+      ],
+      "quality_score": 0.8,
+      "success": true,
+      "human_verified": false,
+      "skill_ids": [
+        "skill-paper-reading-002"
+      ],
+      "signal_type": "positive",
+      "created_at": "2026-07-21T08:48:38.903503+00:00",
+      "tags": [
+        "paper-reading",
+        "turns=7"
+      ]
+    },
+    {
+      "sample_id": "lollapalooza-paper-reading-20260721-phase-plan-train-001",
+      "source_case_id": "lollapalooza-paper-reading-20260721-phase-plan",
+      "domain": "paper-reading",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是 Noctua Agent，当前领域: paper-reading。\n任务指令: 设计技术方案，产出可执行的 implementation plan\n请逐步执行，必要时使用工具。每步之后说明你的推理。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "user",
+          "content": "Phase B 详细展开：GRPO RL 提升",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 1: GRPO 算法回顾",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": true, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 2: Reward 设计（核心难点）",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 3: Ray GRPO Pipeline 架构",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 4: 内存与时间估算",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": true, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 5: 预期对比指标",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 6: LongStraw 整合（可选优化）",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 7: 检查点",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "执行完成。完成 7 个设计阶段。成功: True。评分: 0.8。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        }
+      ],
+      "quality_score": 0.8,
+      "success": true,
+      "human_verified": false,
+      "skill_ids": [
+        "skill-paper-reading-002"
+      ],
+      "signal_type": "positive",
+      "created_at": "2026-07-21T08:48:38.903549+00:00",
+      "tags": [
+        "paper-reading",
+        "turns=7"
+      ]
+    },
+    {
+      "sample_id": "lollapalooza-reproduction-20260721-phase-plan-train-001",
+      "source_case_id": "lollapalooza-reproduction-20260721-phase-plan",
+      "domain": "paper-reading",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是 Noctua Agent，当前领域: paper-reading。\n任务指令: 设计技术方案，产出可执行的 implementation plan\n请逐步执行，必要时使用工具。每步之后说明你的推理。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "user",
+          "content": "Phase A 详细：搭建轨迹采集 Demo Pipeline",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 1: Demo 目标",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 2: 为什么选 BFCL v3 作为 Demo domain",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 3: Pipeline 架构",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 4: 核心实现细节",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": true, \"has_table\": false, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 5: 产出物",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": true}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 6: 成功标准",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": true, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "设计阶段 7: 拓展项（本期不做，记录）",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"has_code\": false, \"has_table\": false, \"has_architecture\": false}",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "执行完成。完成 7 个设计阶段。成功: True。评分: 0.8。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        }
+      ],
+      "quality_score": 0.8,
+      "success": true,
+      "human_verified": false,
+      "skill_ids": [
+        "skill-paper-reading-003"
+      ],
+      "signal_type": "positive",
+      "created_at": "2026-07-21T08:48:38.903589+00:00",
+      "tags": [
+        "paper-reading",
+        "turns=7"
+      ]
+    },
+    {
+      "sample_id": "scaling-admin-pr-to-master-20260721-train-001",
+      "source_case_id": "scaling-admin-pr-to-master-20260721",
+      "domain": "crucible",
+      "messages": [
+        {
+          "role": "system",
+          "content": "你是 Noctua Agent，当前领域: crucible。\n任务指令: 对 18 个修改文件进行 Build/Vet/Case 验证\n请逐步执行，必要时使用工具。每步之后说明你的推理。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "user",
+          "content": "Scaling Admin PR 的自我审查 — 代码变更验证",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "assistant",
+          "content": "变更文件统计",
+          "tool_calls": [
+            {
+              "id": "call_1",
+              "type": "function",
+              "function": {
+                "name": "check_diff-stats",
+                "arguments": "{\"check_id\": \"diff-stats\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"18 modified, 1 deleted, 8 added\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_1",
+          "name": "check_diff-stats"
+        },
+        {
+          "role": "assistant",
+          "content": "watermark.go 删除合理性 — master hpa.go 已包含 SetHPAWatermarkProvider",
+          "tool_calls": [
+            {
+              "id": "call_2",
+              "type": "function",
+              "function": {
+                "name": "check_watermark-delete",
+                "arguments": "{\"check_id\": \"watermark-delete\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"hpa.go:142 has SetHPAWatermarkProvider with matching signature\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_2",
+          "name": "check_watermark-delete"
+        },
+        {
+          "role": "assistant",
+          "content": "YAML 参数对齐 — hpa-watermark.yaml / hpa-realtime-scaleup.yaml 去掉 'cpu'",
+          "tool_calls": [
+            {
+              "id": "call_3",
+              "type": "function",
+              "function": {
+                "name": "check_yaml-changes",
+                "arguments": "{\"check_id\": \"yaml-changes\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"两个文件各移除 1 个 'cpu' 字符串参数，签名匹配 master hpa.go\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_3",
+          "name": "check_yaml-changes"
+        },
+        {
+          "role": "assistant",
+          "content": "16 个 verb 文件签名修复 — endpoint, token → endpoint, token string",
+          "tool_calls": [
+            {
+              "id": "call_4",
+              "type": "function",
+              "function": {
+                "name": "check_verb-signatures",
+                "arguments": "{\"check_id\": \"verb-signatures\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"全部 16 处变更一致，无遗漏、无错误替换\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_4",
+          "name": "check_verb-signatures"
+        },
+        {
+          "role": "assistant",
+          "content": "disablevpa.go 改用 rcap.PrepareApp",
+          "tool_calls": [
+            {
+              "id": "call_5",
+              "type": "function",
+              "function": {
+                "name": "check_disablevpa-refactor",
+                "arguments": "{\"check_id\": \"disablevpa-refactor\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"移除手动 List/query 模式，改用 PrepareApp；签名也加了 string\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_5",
+          "name": "check_disablevpa-refactor"
+        },
+        {
+          "role": "assistant",
+          "content": "缺失文件补全 — 7 个 feature 文件 + 1 个 ptr.go",
+          "tool_calls": [
+            {
+              "id": "call_6",
+              "type": "function",
+              "function": {
+                "name": "check_new-files",
+                "arguments": "{\"check_id\": \"new-files\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"全部 8 个文件语法正确，包名/导入正确\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_6",
+          "name": "check_new-files"
+        },
+        {
+          "role": "assistant",
+          "content": "编译 + go vet 验证",
+          "tool_calls": [
+            {
+              "id": "call_7",
+              "type": "function",
+              "function": {
+                "name": "check_build-vet",
+                "arguments": "{\"check_id\": \"build-vet\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS (with note)\", \"details\": \"go build: OK; go vet: 1 warning (cleanup_scaling.go:51 range var copies lock — 预存问题，非本次引入)\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_7",
+          "name": "check_build-vet"
+        },
+        {
+          "role": "assistant",
+          "content": "Case 文件数量确认",
+          "tool_calls": [
+            {
+              "id": "call_8",
+              "type": "function",
+              "function": {
+                "name": "check_case-count",
+                "arguments": "{\"check_id\": \"case-count\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"testdata/testcases/scaling/ 下共 62 个 case 文件\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_8",
+          "name": "check_case-count"
+        },
+        {
+          "role": "assistant",
+          "content": "冲突 case (hpa-preset/hpa-metric/vpa-lifecycle) 内容确认",
+          "tool_calls": [
+            {
+              "id": "call_9",
+              "type": "function",
+              "function": {
+                "name": "check_conflict-cases",
+                "arguments": "{\"check_id\": \"conflict-cases\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"保留 feature 版本 (EnableHPA/EnableVPA 决策路径)，功能等价\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_9",
+          "name": "check_conflict-cases"
+        },
+        {
+          "role": "assistant",
+          "content": "Merge 提交链路完整",
+          "tool_calls": [
+            {
+              "id": "call_10",
+              "type": "function",
+              "function": {
+                "name": "check_merge-integrity",
+                "arguments": "{\"check_id\": \"merge-integrity\"}"
+              }
+            }
+          ],
+          "tool_call_id": null,
+          "name": null
+        },
+        {
+          "role": "tool",
+          "content": "{\"result\": \"PASS\", \"details\": \"cherry-pick commit d4e1fee 在 master 最新提交\"}",
+          "tool_calls": null,
+          "tool_call_id": "call_10",
+          "name": "check_merge-integrity"
+        },
+        {
+          "role": "assistant",
+          "content": "执行完成。完成 10 项检查, PASSED ✅。成功: True。评分: 0.95。",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        }
+      ],
+      "quality_score": 0.95,
+      "success": true,
+      "human_verified": false,
+      "skill_ids": [],
+      "signal_type": "positive",
+      "created_at": "2026-07-21T08:48:38.903656+00:00",
+      "tags": [
+        "crucible",
+        "turns=10"
+      ]
+    }
+  ]
+}
