@@ -17,7 +17,9 @@ from pydantic import BaseModel, Field
 
 from everos.entrypoints.api.routes.memorize import (
     MemorizeAddRequest,
+    MemorizeFlushRequest,
     MessageItemDTO,
+    flush_memory,
 )
 from everos.entrypoints.api.routes.search import SearchRequest
 from everos.entrypoints.api.utils import extract_request_id
@@ -136,10 +138,27 @@ async def mem_personal(req: GatewayPersonalRequest, request: Request):
         messages=[_map_gateway_message(m, DEFAULT_USER_ID) for m in req.messages],
     )
     result = await memorize(everos_req.model_dump())
+
+    # Explicitly flush if requested — triggers boundary detection + extraction.
+    # Without this, messages are only "accumulated" and never extracted into
+    # episodes / atomic facts / profile.
+    flush_status = "flushed=false"
+    if req.flush:
+        flush_result = await memorize(
+            {
+                "session_id": everos_req.session_id,
+                "app_id": everos_req.app_id,
+                "project_id": everos_req.project_id,
+                "messages": [],
+            },
+            is_final=True,
+        )
+        flush_status = flush_result.status
+
     return _gw_ok(request_id, {
         "messageCount": result.message_count,
         "flushed": req.flush,
-        "status": result.status,
+        "status": flush_status,
     })
 
 
@@ -153,10 +172,24 @@ async def mem_agent_memory(req: GatewayAgentMemoryRequest, request: Request):
         messages=[_map_gateway_message(m, DEFAULT_USER_ID) for m in req.messages],
     )
     result = await memorize(everos_req.model_dump())
+
+    flush_status = "flushed=false"
+    if req.flush:
+        flush_result = await memorize(
+            {
+                "session_id": everos_req.session_id,
+                "app_id": everos_req.app_id,
+                "project_id": everos_req.project_id,
+                "messages": [],
+            },
+            is_final=True,
+        )
+        flush_status = flush_result.status
+
     return _gw_ok(request_id, {
         "messageCount": result.message_count,
         "flushed": req.flush,
-        "status": result.status,
+        "status": flush_status,
     })
 
 
