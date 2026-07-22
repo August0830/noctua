@@ -50,11 +50,21 @@ noctua/
 │   ├── *.example.toml             # 模板（提交 GitHub）
 │   ├── agent-templates/           # Agent 人格定义
 │   └── plans/                     # 可执行的任务计划
+├── data/                          # 运行时数据
+│   └── runs/ →                    # 软链：指向项目 worklog/runs/
+│                                  # 实际数据收拢在项目侧，noctua 只读引用
 ├── scripts/                       # 运维脚本
 │   ├── run_everos.py              # EverOS 启动入口（含 MCP 兼容层）
 │   └── import_*.py                # 种子数据批量导入
 ├── rome →                         # 软链：GPU 推理优化调研（只读）
 └── crucible →                     # 软链：K8s 集测框架（只读）
+
+┌── 项目侧（如 crucible-venti-test-scaling-admin） ─┐
+│ worklog/                                            │
+│ ├── plans/        Plan YAML 文件存放处               │
+│ └── runs/         每次执行的产出（gitignore）         │
+│ 工作上下文收拢在项目侧，noctua 通过软链引用。        │
+└────────────────────────────────────────────────────┘
 ```
 
 ## 快速开始

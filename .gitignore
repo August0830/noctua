@@ -25,3 +25,6 @@ configs/agent.toml
 configs/lora-training.toml
 
 # Keep plan templates but not actual plans (task-specific)
+
+# Runtime execution data (symlink to project worklog/runs/)
+data/runs
