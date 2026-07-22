@@ -48,6 +48,54 @@ steps:
 raven agent -m "按 Rome Agent Template 分析 rome/rubicon/data/results/ 下的实验结果"
 ```
 
+### 执行载体选择（OpenCode vs Raven）
+
+两者通过 EverOS 共享记忆。按任务确定性选择载体——**确定性的给 Raven，不确定的给 OpenCode。** 详见 `docs/execution-router.md`。
+
+**自主判断规则：**
+
+```
+收到任务
+  ↓
+mem_search("similar tasks")                ← 先查是否有历史经验
+  ↓
+有成熟的 Skill/Case? ─── 否 ──→ 用 OpenCode 探索（交互排查/创造性工作）
+  ↓ 是
+能拆成确定性步骤? ─── 部分不确定 ──→ OpenCode 设计 Plan → 写 YAML → 交 Raven 执行
+  ↓ 全部确定
+用 Raven 执行 Plan（自动推进，检查点暂停等人批）
+```
+
+**场景速查：**
+
+| 典型任务 | 载体 | 理由 |
+|---------|------|------|
+| 跑已有集成测试 | Raven | 步骤已知 |
+| 新场景首次探索/排查 | OpenCode | 根因未知，需交互 |
+| 标准扫参实验 | Raven | 参数确定，纯执行 |
+| 失败后 debug | OpenCode | 需要看日志、改代码 |
+| 设计新架构 | OpenCode | 创造性工作 |
+| 数据导入/定时检查 | Raven | 重复操作 |
+
+**切换规则：**
+- Raven 连续失败 2 次同一步骤 → 切 OpenCode 排查
+- 人类在检查点 reject → 切 OpenCode 重新设计
+- Plan YAML 产出且确认后 → 切 Raven 自动执行
+
+**Raven 执行 Plan：**
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+raven agent -w /Users/mengzhilu.mzl/Desktop/working/noctua \
+  -m "读取并按步骤执行 configs/plans/<plan-file>.yaml 中的计划。遇到 checkpoint 时暂停等我审批。"
+```
+
+**当前 Raven 配置：**
+- Model: `deepseek/deepseek-v4-pro`
+- Reasoning: `max`
+- Context: 128K tokens, Max output: 16K
+- Workspace: `~/Desktop/working/noctua`
+
 ### 3. Verify（质量评分）
 
 VerifierActor（`src/noctua/eval/verifier.py`）以 LLM-as-Judge 模式对 Agent 产出评分：
@@ -147,9 +195,31 @@ curl -X POST http://127.0.0.1:8000/api/v1/mem/search \
 - DeepSeek API Key（LLM）
 - 硅基流动 API Key（Embedding + Rerank）
 
-## 只读数据源
+## 只读数据源 & 工作目录原则
 
-软链 `rome/` 和 `crucible/` 指向外部工作目录。Agent 可读但不可写：
+**核心原则：工作上下文收拢在项目侧，noctua 通过软链引用。**
+
+每个具体项目（如 crucible-venti-test）在自己的 `worklog/` 下维护：
+
+```
+~/Desktop/working/crucible/crucible-venti-test-scaling-admin/
+└── worklog/
+    ├── plans/                          # Plan YAML 文件
+    │   └── scaling-admin-pr-to-master.yaml
+    └── runs/                           # 运行时产出（gitignore）
+        └── scaling-admin-pr-to-master-20260721/
+            ├── gap-analysis.yaml
+            ├── smoke-results.txt
+            └── status.md
+```
+
+Noctua 通过软链访问：
+- `~/Desktop/working/noctua/data/runs/` → 软链到 crucible `worklog/runs/`
+- Plan 文件可直接用绝对路径引用，无需复制到 noctua `configs/plans/`
+
+这样两边都能看到运行时数据，但工作上下文（Plan + Runs + 代码）物理上收拢在项目侧。
+
+其他只读数据源：
 - `rome/rubicon/data/` — 实验数据、Roofline
 - `rome/rubicon/docs/` — 设计文档、报告
 - `crucible/testdata/` — 测试用例
